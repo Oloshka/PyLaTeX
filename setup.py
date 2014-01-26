@@ -157,7 +157,7 @@ setup(name='PyLaTeX',
       description='A Python library for creating LaTeX files',
       long_description=__doc__,
       packages=['pylatex'],
-      url='https://github.com/JelteF/PyLaTeX',
+      url='https://github.com/Oloshka/PyLaTeX',
       license='MIT',
       install_requires=['ordered-set'],
       )

@@ -10,7 +10,7 @@
     :license: MIT, see License for more details.
 """
 
-from collections import UserList
+from UserList import UserList
 from ordered_set import OrderedSet
 from pylatex.utils import dumps_list
 
