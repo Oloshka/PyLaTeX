@@ -25,7 +25,7 @@ class Matrix(BaseLaTeXClass):
         self.alignment = alignment
         self.name = name
 
-        super().__init__(packages=[Package('amsmath')])
+        super(Matrix, self).__init__(packages=[Package('amsmath')])
 
     def dumps(self):
         string = r'\begin{'
@@ -54,5 +54,5 @@ class Matrix(BaseLaTeXClass):
 
         string += r'\end{' + mtype + '}'
 
-        super().dumps()
+        super(Matrix, self).dumps()
         return string

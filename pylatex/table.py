@@ -32,7 +32,7 @@ class Table(BaseLaTeXContainer):
 
         self.width = sum(spec_counter[l] for l in column_letters)
 
-        super().__init__(data)
+        super(Table, self).__init__(data)
 
     def add_hline(self, start=None, end=None):
         """Add a horizontal line to the table"""
@@ -66,5 +66,5 @@ class Table(BaseLaTeXContainer):
 
         string += r'\end{tabular}'
 
-        super().dumps()
+        super(Table, self).dumps()
         return string

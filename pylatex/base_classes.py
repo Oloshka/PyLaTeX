@@ -51,7 +51,7 @@ class BaseLaTeXContainer(BaseLaTeXClass, UserList):
 
         self.data = data
 
-        super().__init__(packages=packages)
+        super(BaseLaTeXContainer, self).__init__(packages=packages)
 
     def dumps(self):
         """Represents the container as a string in LaTeX syntax."""
@@ -78,7 +78,7 @@ class BaseLaTeXNamedContainer(BaseLaTeXContainer):
         self.name = name
         self.options = options
 
-        super().__init__(data=data, packages=packages)
+        super(BaseLaTeXNamedContainer, self).__init__(data=data, packages=packages)
 
     def dumps(self):
         """Represents the named container as a string in LaTeX syntax."""
@@ -91,6 +91,6 @@ class BaseLaTeXNamedContainer(BaseLaTeXContainer):
 
         string += r'\end{' + self.name + '}\n'
 
-        super().dumps()
+        super(BaseLaTeXNamedContainer, self).dumps()
 
         return string
